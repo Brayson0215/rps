@@ -29,8 +29,6 @@ if password==True:
 else:
     print("enter the correct password")
 
-global score
-score=0
 
 
 
@@ -41,6 +39,8 @@ score=0
 
 #define when computer choose rock
 def computer_choice_rock():
+    global score
+    score=0
     user_choice =input("1 rock, 2 paper, 3 scissors: ")
     if user_choice == "1":
         print ("DRAW. YOU CHOOSE ROCK AND THE COMPUTER CHOSE ROCK")
@@ -62,6 +62,8 @@ def computer_choice_rock():
 
 #define when computer choose paper
 def computer_choice_paper():
+    global score
+    score=0
     user_choice = input("1 rock, 2 paper, 3 scissors: ")
     if user_choice == "1":
         print("YOU LOOSE. YOU CHOOSE  AND THE COMPUTER CHOSE PAPER")
@@ -84,6 +86,8 @@ def computer_choice_paper():
 
 
 def computer_choice_scissors():
+    global score
+    score = 0
     user_choice = input("1 rock, 2 paper, 3 scissors: ")
     if user_choice == "1":
         print("YOU WIN. YOU CHOOSE ROCK AND THE COMPUTER CHOSE SCISSORS")
@@ -99,7 +103,7 @@ def computer_choice_scissors():
     else:
         print("Try again")
         computer_choice_scissors()#while user put invalid option
-
+    print("score", score)
 
 #retry
 #tryagain
@@ -113,5 +117,5 @@ def try_again():
     else:
         print ("try again")
         try_again()
-    print("score",score)
+
 RPS()
